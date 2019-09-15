@@ -533,11 +533,4 @@
     - utter_appraisal.thank_you
 *greetings.whatsup
     - utter_greetings.whatsup
-
-## New Story
-
-* ask_for_balances
-    - utter_leave_type
-* saying_leave_type{"leave_type":"Sick"}
-    - slot{"leave_type":"Sick"}
-    - action_fetch_entitlement
+    
