@@ -18,10 +18,6 @@
 * ask_for_balances{"leave_type": "annual", "year_string": "current year"}
     - action_fetch_entitlement
 
-<!-- ## Remaining entitlement - with Leave Type and reference number from user
-* ask_for_balances{"leave_type": "annual", "reference": "ADP243"}
-    - action_fetch_entitlement -->
-
 ## Remaining entitlement - that are going to expire
 * ask_for_expiring_balances
     - utter_leave_type

@@ -1,3 +1,7 @@
+## story 00
+* out_of_scope
+    - fallback_action
+    
 ## story 01
 *agent.acquaintance
     - utter_agent.acquaintance

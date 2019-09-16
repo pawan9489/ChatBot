@@ -90,6 +90,7 @@ intents:
 - saying_which_year
 - saying_leave_type
 - ask_for_balances
+- out_of_scope
 entities:
 - leave_type
 - year
@@ -99,13 +100,11 @@ entities:
 slots:
   balance:
     type: unfeaturized
+  date:
+    type: text
   leave_type:
     type: text
-  # reference:
-  #   type: text
   year:
-    type: text
-  date:
     type: text
   year_string:
     type: text
@@ -601,3 +600,4 @@ actions:
 - utter_end_date
 - action_fetch_entitlement
 - action_fetch_entitlement_expiring
+- fallback_action

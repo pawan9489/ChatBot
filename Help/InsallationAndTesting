@@ -15,6 +15,7 @@
 // Step1: stack build // For Windows Only if Install failed during build(https://github.com/facebook/duckling/issues/349)
 // step2: stack exec duckling-example-exe
 // Add the url in endpoints.yml
+// For Custom Fall Back Policy // pip install antidote
 
 // Project Setup
 4. rasa init --no-prompt

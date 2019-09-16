@@ -18,22 +18,32 @@
 - Get my [balance](balance)
 - [Sick](leave_type) Leave [balance](balance)
 - [Sick](leave_type) Leave [balances](balance)
+- [Sick](leave_type) Leave [entitlement](balance)
+- [Sick](leave_type) Leave [entitlements](balance)
 - [balance](balance)?
 - [balances](balance)?
 - [entitlement](balance)?
 - [entitlements](balance)?
-- [Annual](leave_type) leave [balance](balance:balances)
-- [Annual](leave_type) [balance](balance:balances)
-- My [balance](balance:balances) for [2019](year) year
-- [balance](balance:balances) of [current year](year_string)
-- [balance](balance:balances) of [next year](year_string)
-- May i know my [balance](balance:balances) of [this year](year_string)
-- My remaining [balance](balance:balances)
-- Remaining [balance](balance:balances)
+- [Annual](leave_type) leave [balance](balance)
+- [Annual](leave_type) leave [balances](balance)
+- [Annual](leave_type) leave [entitlement](balance)
+- [Annual](leave_type) leave [entitlements](balance)
+- [Annual](leave_type) [balance](balance)
+- [Annual](leave_type) [balances](balance)
+- [Annual](leave_type) [entitlement](balance)
+- [Annual](leave_type) [entitlements](balance)
+- [Sick](leave_type) [balances](balance)
+- My [balance](balance) for [2019](year) year
+- [balance](balance) of [current year](year_string)
+- [balance](balance) of [next year](year_string)
+- May i know my [balance](balance) of [this year](year_string)
+- My remaining [balance](balance)
+- Remaining [balance](balance)
+- Remaining [entitlement](balance)
 
 ## intent:ask_for_expiring_balances
-- My [balance](balance:balances) that are about to expire
-- Expiring leave [balance](balance:balances)
+- My [balance](balance) that are about to expire
+- Expiring leave [balance](balance)
 
 ## intent:saying_which_year
 - [this year](year_string)

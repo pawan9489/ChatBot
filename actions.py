@@ -37,3 +37,22 @@ class ActionFetchEntitlement(Action):
         # Action Resulting Message
         dispatcher.utter_message("You have 5 days of entitlement left.")
         return []
+
+class FallbackAction(Action):
+
+    def name(self) -> Text:
+        return "fallback_action"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        from rasa_core.events import UserUtteranceReverted
+        # Action Registration
+        dispatcher.utter_template("fallback_action", tracker)
+
+        # Can fill Slots in between
+        # SlotSet("Key", [Value])
+        
+        # Action Resulting Message
+        dispatcher.utter_message("Sorry, didn't get that. Try again.")
+        return [UserUtteranceReverted()]
