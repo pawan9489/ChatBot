@@ -3,6 +3,18 @@
 2. Install C++ 14 Build tools (Visual Studio Community Edition 2019) (Windows only)
 3. pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 // For Custom Action in Python => pip install rasa-sdk // Not Mandatory if rasa-x is installed
+// For Duckling install Haskell Stack && Duckling code (ONLY IF you want Dates, Amounts of Money, Durations, Distances, Ordinals Extraction)
+// https://github.com/commercialhaskell/stack/blob/master/doc/install_and_upgrade.md
+// https://github.com/facebook/duckling
+// For Windows Pre-Requisites
+//    - duckling-master/duckling.cabal , replace "regex-pcre" with "regex-pcre-builtin"
+//    - Copy "zoneinfo" folder beside the "duckling-example-exe.exe" (https://github.com/botpress/duckling/blob/8b9e4f0e0c4577a814e9f2592bb8e9df0f578b7e/windows/zoneinfo.zip)
+//    - duckling-master/exe/ExampleMain.hs, replace "/usr/share/zoneinfo/" with "<full_path_to>/zoneinfo/"
+//    - duckling-master/exe/Duckling/Data/TimeZone.hs, replace "System.FilePath" with "System.FilePath.Posix"
+// step0: stack install // Will download Haskell
+// Step1: stack build // For Windows Only if Install failed during build(https://github.com/facebook/duckling/issues/349)
+// step2: stack exec duckling-example-exe
+// Add the url in endpoints.yml
 
 // Project Setup
 4. rasa init --no-prompt
@@ -214,3 +226,5 @@ MAX_HISTIRY in conversations
 
 // Slots => Bots Memory
 // Slots are not specific except categorical & bool slots
+
+
