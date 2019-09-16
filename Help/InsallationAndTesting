@@ -2,6 +2,10 @@
 1. Install Python Version <= 3.6
 2. Install C++ 14 Build tools (Visual Studio Community Edition 2019) (Windows only)
 3. pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+// Spacy
+// pip install -U spacy
+// python -m spacy download en_core_web_md
+// python -m spacy link en_core_web_md en
 // For Custom Action in Python => pip install rasa-sdk // Not Mandatory if rasa-x is installed
 // For Duckling install Haskell Stack && Duckling code (ONLY IF you want Dates, Amounts of Money, Durations, Distances, Ordinals Extraction)
 // https://github.com/commercialhaskell/stack/blob/master/doc/install_and_upgrade.md
