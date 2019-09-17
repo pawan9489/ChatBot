@@ -8,16 +8,16 @@ pipeline:
 - name: RegexFeaturizer
 - name: CRFEntityExtractor
 - name: EntitySynonymMapper
-# - name: ner_duckling_http
-#   url: http://localhost:8000
-#   dimensions:
-#   - time
-#   - email
-#   - number
-#   - amount-of-money
-#   - distance
-#   locale: "en-IN"
-#   timezone: "Asia/Kolkata"
+- name: DucklingHTTPExtractor
+  url: http://35.245.19.88:8000
+  dimensions:
+  - time
+  - email
+  - number
+  - amount-of-money
+  - distance
+  locale: "en-IN"
+  timezone: "Asia/Kolkata"
 - name: SklearnIntentClassifier
 
 # Configuration for Rasa Core.

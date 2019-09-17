@@ -1,0 +1,41 @@
+import ./common.chatito
+import ./questioning.chatito
+import ./leave_type.chatito
+import ./balances_year.chatito
+
+%[ask_for_balances]
+    ~[balance]
+    ~[balance]?
+    ~[hi?] my ~[balance]
+    ~[hi?] ~[get] my ~[balance]
+    ~[hi?] ~[questioningMy] ~[balance]
+    ~[hi?] ~[questioningMy] @[leave_type] ~[balance]
+    ~[hi?] ~[questioningMy] @[leave_type] leave ~[balance]
+    @[leave_type] leave ~[balance]
+    @[leave_type] ~[balance]
+    @[leave_type] ~[balance]?
+    ~[my?] remaining ~[balance] of @[year_string]
+    ~[get?] my ~[balance] ~[for?] @[year_string]
+
+%[saying_leave_type]
+    ~[hi?] @[leave_type] ~[leave_type_prefix?]
+    for @[leave_type] ~[leave_type_prefix?]
+
+%[saying_which_year]
+    ~[hi?] @[year_string]
+    for @[year_string]
+
+~[balance]
+    balance
+    balances
+    entitlement
+    entitlements
+
+~[get]
+    get
+    fetch
+
+~[leave_type_prefix]
+    leave
+    leave type
+

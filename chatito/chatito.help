@@ -1,0 +1,62 @@
+// 1. Will Generate all possible combinations
+%[intent_name]
+    hi
+    hey
+
+// 2. Restrict possible combinations
+%[intent_name](entity_arguments) ex: ('training': '1000', 'testing': '100')
+    hi
+    hey
+
+// 3. Slots
+@[slot_name]
+    value1
+    value2
+
+// 4. Usage of slot in intents
+%[intent]
+    hi @[slot?] // ? => optional slot
+
+// 5. Content specific variations
+%[deliver]
+    deliver @[time#relative]
+    deliver in @[time#exact]
+
+@[time#relative]
+    as fast as possible
+    quickly
+
+@[time#exact]
+    5 hours
+    15 minutes
+
+// 6. Aliases with ~
+%[greet]
+    ~[hi] ~[how are you?] // Alias "how are you" can be Omitted 
+
+~[hi]
+    hi
+    hey
+
+// 7. Import Chatito files
+import ./abc.chatito
+
+// 8. Distribution of sentences 
+%[intent]
+    * [20%] first sentence // 20% probability that this line will appear in final output
+
+
+npx chatito ask_for_balances.chatito --format=rasa
+npx chatito chatito/ask_for_balances.chatito --format=rasa
+
+// Documentation: https://github.com/rodrigopivi/Chatito
+npx chatito <pathToFileOrDirectory> \
+    --format=<format> \ // default, rasa, luis, flair or snips
+    --formatOptions=<formatOptions> \ 
+    --outputPath=<outputPath> \
+    --trainingFileName=<trainingFileName> \
+    --testingFileName=<testingFileName> \
+    --defaultDistribution=<defaultDistribution> \
+
+
+ 

@@ -96,10 +96,7 @@ entities:
 - year
 - reference
 - year_string
-- balance
 slots:
-  balance:
-    type: unfeaturized
   date:
     type: text
   leave_type:
