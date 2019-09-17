@@ -1,0 +1,24 @@
+import ./common.chatito
+
+%[saying_employee_id]
+    ~[hi?] ~[employee_id] ~[is?] @[reference]
+
+@[reference]
+    EID07642
+    EID00001
+    EID05478
+
+~[is]
+    is
+
+~[employee_id]
+    EID
+    employee_id
+    employee_id_no
+    employee_id number
+    employee id
+    employee id number
+    employee identification
+    employee identification number
+    reference
+    reference number

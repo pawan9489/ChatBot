@@ -86,18 +86,27 @@ intents:
 - agent.clever
 - agent.age
 - agent.what_can_do
-- ask_for_expiring_balances
 - saying_which_year
 - saying_leave_type
+- saying_leave_date_range
 - ask_for_balances
+- deny_confirmation_of_leave_applying
+- feeling_sick
+- apply_leave
+- ask_for_holidays_information
+- saying_employee_id
 - out_of_scope
 entities:
 - leave_type
 - year
 - reference
 - year_string
+- datetime
+- duration
 slots:
-  date:
+  datetime:
+    type: text
+  duration:
     type: text
   leave_type:
     type: text
@@ -105,6 +114,10 @@ slots:
     type: text
   year_string:
     type: text
+  reference:
+    type: unfeaturized
+  name:
+    type: unfeaturized
 templates:
   utter_agent.acquaintance:
   - text: I'm a virtual agent
@@ -504,6 +517,26 @@ templates:
   - text: Please provide the Start date
   utter_end_date:
   - text: Please provide the End date
+  utter_need_any_more_information:
+  - text: Do you need any more information
+  utter_have_a_nice_day:
+  - text: Thank you. Have a nice day.
+  - text: Have a great day.
+  - text: Have a wonderful day.
+  - text: Be of good cheer.
+  utter_how_can_i_help_you_more:
+  - text: Go head shoot your concerns.
+  - text: Fine I am here to answer your queries
+  utter_provide_the_employee_id:
+  - text: Can I have your Employee ID
+  - text: Please provide your Employee ID
+  - text: Enter your Employee ID
+  utter_wait_till_i_get_you_leave_info:
+  - text: Thank you {name}, I am pulling up your leaves
+  - text: Thank you {name}, I am fetching your leaves information
+  utter_provide_start_and_end_date_of_leave:
+  - text: May I know the start and end date of your leave.
+  - text: Please provide the start and end date of your leave.
 actions:
 - utter_agent.beautiful
 - utter_agent.be_clever
@@ -591,10 +624,21 @@ actions:
 - utter_agent.ready
 - utter_agent.birth_date
 - utter_user.angry
+- utter_wait_till_i_get_you_leave_info
 - utter_leave_type
 - utter_which_year
 - utter_start_date
 - utter_end_date
+- utter_how_can_i_help_you_more
+- utter_provide_the_employee_id
+- utter_need_any_more_information
+- utter_have_a_nice_day
 - action_fetch_entitlement
-- action_fetch_entitlement_expiring
+- action_fetch_holidays_information
+- action_apply_a_leave
+- action_utter_leave_confirmation_message
+- action_utter_leave_confirmed_message
+- action_slot_reset
+- action_restarted
 - fallback_action
+

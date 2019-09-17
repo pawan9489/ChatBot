@@ -1,0 +1,31 @@
+import ./common.chatito
+import ./questioning.chatito
+
+%[ask_for_holidays_information]
+    ~[hi?] ~[questioningMultiple?] ~[upcoming] ~[holiday]
+
+~[holiday]
+    holiday
+    holidays
+    holy day
+    holy days
+    festivity
+    festivals
+    resting days
+
+~[want_to_know]
+    want to know
+    wanted to know
+    thinking to know
+
+~[upcoming]
+    upcoming
+    approaching
+    coming
+    forthcoming
+    imminent
+    impending
+    nearing
+    oncoming
+    pending
+    proximate

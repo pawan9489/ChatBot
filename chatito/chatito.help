@@ -59,4 +59,6 @@ npx chatito <pathToFileOrDirectory> \
     --defaultDistribution=<defaultDistribution> \
 
 
- 
+    ~[can_you?] ~[apply] ~[a_an?] @[leave_type] ~[leave_or_not?]
+    ~[can_you?] ~[apply] ~[a_an?] @[leave_type] ~[leave_or_not?] for @[duration]
+    ~[want_to] ~[a_an?] @[leave_type] ~[leave_or_not?]

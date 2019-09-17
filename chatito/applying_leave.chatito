@@ -1,0 +1,66 @@
+import ./common.chatito
+import ./questioning.chatito
+import ./leave_type.chatito
+import ./booking_dates.chatito
+
+~[can_you]
+    can you
+    can you please
+
+~[sick]
+    sick
+    ill
+    cruddy
+    lousy
+    seedy
+    sickish
+    dizzy
+    light-headed
+    shaky
+    woozy
+    achy
+    feverish.
+    diseased
+    disordered
+    weak
+    squeamish
+
+~[feeling]
+    feeling
+    sensing
+
+%[feeling_sick]
+    ~[feeling] ~[sick]
+
+%[apply_leave]('distribution': 'even')
+    *[20%] ~[can_you?] ~[apply] ~[a_an?] @[leave_type] leave
+    ~[apply] @[leave_type] leave on @[datetime]
+    ~[apply] @[leave_type] leave from @[datetime] to @[datetime]
+    ~[apply] @[leave_type] leave for @[duration]
+
+%[deny_confirmation_of_leave_applying]
+    just forget it
+    dont ~[apply] it
+    dont ~[apply] ~[leave_or_not?]
+    wanted to check but dont want to ~[apply] ~[leave_or_not?]
+
+~[apply]
+    apply
+    create
+    book
+    reserve
+    place
+
+~[want_to]
+    want to take
+    wanted to take
+    felling to take
+    thinking to take
+    thinking of taking
+
+~[a_an]
+    a
+    an
+
+~[leave_or_not]
+    leave

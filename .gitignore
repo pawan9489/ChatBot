@@ -6,6 +6,10 @@ __pycache__
 node_modules
 
 # rasa train nlu
-compact.png
+confmat.png
 errors.json
 hist.png
+
+# npx chatito chatito/ask_for_balances.chatito --format=rasa
+rasa_dataset_testing.json
+rasa_dataset_training.json

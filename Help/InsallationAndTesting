@@ -176,6 +176,14 @@ DucklingHTTPExtractor - Dates, Amounts of Money, Durations, Distances, Ordinals
       type: list
     internal_user_id: // Values of this type doesnot influence dialouge flow
       type: unfeaturized
+  forms: // Used to fill required_solts to make an action
+    - <form_name>
+    // In Sotries 
+    // ## happy path
+    // * request_restaurant
+    //     - restaurant_form
+    //     - form{"name": "restaurant_form"} // Activate Form
+    //     - form{"name": null} // Deactivate Form
   actions: // custom_actions
     - utter_default
   templates:

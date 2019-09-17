@@ -7,17 +7,18 @@ pipeline:
 - name: SpacyFeaturizer
 - name: RegexFeaturizer
 - name: CRFEntityExtractor
-- name: EntitySynonymMapper
 - name: DucklingHTTPExtractor
   url: http://35.245.19.88:8000
-  dimensions:
-  - time
-  - email
-  - number
-  - amount-of-money
-  - distance
-  locale: "en-IN"
-  timezone: "Asia/Kolkata"
+  # dimensions:
+  # - time
+  # - email
+  # - number
+  # - amount-of-money
+  # - distance
+  # locale: en-GB
+  # timezone: Europe/Berlin
+  # timezone: Asia/Calcutta
+- name: EntitySynonymMapper
 - name: SklearnIntentClassifier
 
 # Configuration for Rasa Core.
