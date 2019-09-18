@@ -16,22 +16,6 @@ from collections import namedtuple
 
 DateRange = namedtuple('DateRange', ['start', 'end'])
 
-# class ActionUtterProvideTheEmployeeID(Action):
-#     def name(self) -> Text:
-#         return "utter_ask_reference"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         emp_id = tracker.get_slot('reference')
-#         #   utter_provide_the_employee_id:
-#         messages = ['Can I have your Employee ID', 'Please provide your Employee ID', 'Enter your Employee ID']
-#         if emp_id is None:
-#             import random
-#             dispatcher.utter_message(random.choice(messages))
-#         return []
-
-
 class ActionValidateEmployeeID(Action):
     def name(self) -> Text:
         return "action_validate_employee_id"
@@ -120,9 +104,6 @@ class ApplyLeaveForm(FormAction):
             "end_datetime": [
                 self.from_entity(entity="end_datetime", intent="apply_leave"),
                 self.from_entity(entity="end_datetime", intent="saying_leave_date_range"),
-                # self.from_entity(entity="time", intent="apply_leave"), # duckling dimension
-                # self.from_entity(entity="time", intent="saying_leave_date_range"),
-                # self.from_text(intent="apply_leave"),
             ]
         }
 
@@ -177,7 +158,68 @@ class ApplyLeaveForm(FormAction):
         leave_type = tracker.get_slot('leave_type')
         start_datetime = tracker.get_slot('start_datetime')
         end_datetime = tracker.get_slot('end_datetime')
-        dispatcher.utter_message("Your leave is Successfully applied {0} {1} {2} {3}.".format(reference, leave_type, start_datetime, end_datetime))
+        name = data[reference]["name"]
+        dispatcher.utter_message("{3} - your {0} leave is Successfully applied from {1} to {2}.".format(leave_type, start_datetime, end_datetime, name))
+        return []
+
+class SeekBalancesForm(FormAction):
+    def name(self):
+        return "seek_balances_form"
+
+    @staticmethod
+    def required_slots(tracker):
+        return [
+            "reference",
+            # "leave_type", Optional
+        ]
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {
+            "reference": [
+                self.from_entity(entity="reference", intent="saying_employee_id")
+            ],
+            "leave_type": [
+                self.from_entity(entity="leave_type", intent="saying_leave_type"),
+            ],
+        }
+
+    def validate_reference(self, value, dispatcher, tracker, domain):
+        if value.lower() in data:
+            return {"reference": value}
+        else:
+            dispatcher.utter_template("utter_not_a_valid_employee_id", tracker)
+            return {"reference": None}
+    
+    def validate_leave_type(self, value, dispatcher, tracker, domain):
+        emp_id = tracker.get_slot("reference")
+        if emp_id is None:
+            return {"leave_type": None}
+        if value.lower() in map(lambda a: a["name"].lower(), data[emp_id]["leave_information"]["enrolments"]):
+            return {"leave_type": value}
+        else:
+            dispatcher.utter_template("utter_not_a_valid_leave_type", tracker)
+            return {"leave_type": None}
+
+    def submit(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict]:
+        reference = tracker.get_slot('reference')
+        name = data[reference]["name"]
+        leave_type = tracker.get_slot('leave_type')
+        if leave_type is None:
+            dispatcher.utter_message("{0} got {1}.".format(name, ", ".join(map(lambda a: "{0} {1} leaves".format(a["balance"], a["name"]), data[reference]["leave_information"]["enrolments"]))))
+        else:
+            dispatcher.utter_message("{0} got {1}.".format(name, ", ".join(map(lambda a: "{0} {1} leaves".format(a["balance"], a["name"]), filter(lambda a: a["name"] == leave_type, data[reference]["leave_information"]["enrolments"])))))
         return []
 
 class ActionFetchEntitlement(Action):
@@ -243,11 +285,11 @@ class ActionUtterLeaveConfirmationMessage(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        reference = tracker.get_slot('reference')
+        # reference = tracker.get_slot('reference')
         leave_type = tracker.get_slot('leave_type')
         start_datetime = tracker.get_slot('time')['from']
         end_datetime = tracker.get_slot('time')['to']
-        dispatcher.utter_message("Can I apply Leave.", reference, leave_type, start_datetime, end_datetime)
+        dispatcher.utter_message("Can I apply {0} Leave from {1} to {2}.", leave_type, start_datetime, end_datetime)
         return []
 
 class ActionUtterLeaveConfirmedMessage(Action):

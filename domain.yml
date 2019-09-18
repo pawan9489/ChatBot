@@ -648,8 +648,8 @@ actions:
 - utter_wait_till_i_get_you_leave_info
 - utter_ask_leave_type
 - utter_which_year
-- utter_ask_start_date
-- utter_end_date
+- utter_ask_start_datetime
+- utter_ask_end_datetime
 - utter_how_can_i_help_you_more
 - utter_not_a_valid_employee_id
 - utter_not_a_valid_leave_type
@@ -673,6 +673,6 @@ actions:
 - fallback_action
 - action_slot_reset_except_employee_id
 - action_slot_reset -->
-- utter_provide_the_employee_id
 forms:
 - apply_leave_form
+- seek_balances_form
