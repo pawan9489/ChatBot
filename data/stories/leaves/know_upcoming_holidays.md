@@ -1,6 +1,6 @@
 ## Know upcoming holidays
 * ask_for_holidays_information
-    - fetch_holidays_information
+    - action_fetch_holidays_information
 * appraisal.good OR confirmation.yes
     - utter_need_any_more_information
 * confirmation.no
@@ -9,7 +9,7 @@
 
 ## Know upcoming holidays
 * ask_for_holidays_information
-    - fetch_holidays_information
+    - action_fetch_holidays_information
 * appraisal.good OR confirmation.yes
     - utter_need_any_more_information
 * appraisal.good OR confirmation.yes
@@ -18,7 +18,7 @@
 
 ## Know upcoming holidays 2
 * ask_for_holidays_information
-    - fetch_holidays_information
+    - action_fetch_holidays_information
 * greetings.bye OR greetings.goodnight
     - utter_have_a_nice_day
     - action_slot_reset

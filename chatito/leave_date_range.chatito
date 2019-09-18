@@ -1,9 +1,14 @@
-import ./common.chatito
-import ./questioning.chatito
-import ./leave_type.chatito
 import ./booking_dates.chatito
-import ./applying_leave.chatito
 
 %[saying_leave_date_range]
     from @[datetime] to @[datetime]
+    ~[want_from?] @[datetime] to @[datetime]
     on @[datetime]
+
+~[want_from]
+    apply from
+    create from
+    book from
+    want from
+    want to take from
+    thinking of taking from

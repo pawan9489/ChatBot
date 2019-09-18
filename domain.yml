@@ -110,14 +110,14 @@ slots:
     type: text
   leave_type:
     type: text
+  name:
+    type: unfeaturized
+  reference:
+    type: unfeaturized
   year:
     type: text
   year_string:
     type: text
-  reference:
-    type: unfeaturized
-  name:
-    type: unfeaturized
 templates:
   utter_agent.acquaintance:
   - text: I'm a virtual agent
@@ -537,6 +537,8 @@ templates:
   utter_provide_start_and_end_date_of_leave:
   - text: May I know the start and end date of your leave.
   - text: Please provide the start and end date of your leave.
+  utter_not_a_valid_employee_id:
+  - text: I am sorry, I couldn’t find your Employee ID. Can you please try again with right employee ID
 actions:
 - utter_agent.beautiful
 - utter_agent.be_clever
@@ -631,14 +633,18 @@ actions:
 - utter_end_date
 - utter_how_can_i_help_you_more
 - utter_provide_the_employee_id
+- utter_not_a_valid_employee_id
+- utter_provide_start_and_end_date_of_leave
+- utter_already_leave_on_date_range_provided
 - utter_need_any_more_information
 - utter_have_a_nice_day
 - action_fetch_entitlement
 - action_fetch_holidays_information
+- action_utter_already_leave_on_date_range_provided
+- action_utter_you_are_out_of_balances
 - action_apply_a_leave
 - action_utter_leave_confirmation_message
 - action_utter_leave_confirmed_message
 - action_slot_reset
 - action_restarted
 - fallback_action
-

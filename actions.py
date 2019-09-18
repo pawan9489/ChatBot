@@ -6,7 +6,7 @@
 # SlotSet("Key", [Value])
 
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker, FormAction
+from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet, Restarted, AllSlotsReset
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -30,6 +30,28 @@ class ActionFetchHolidaysInformation(Action):
         dispatcher.utter_message("We have 3 Holidays coming up Veterans Day on Nov 11 th , Thanksgiving on Nov 28 th , Christmas day on Dec 25 th.")
         return []
 
+class ActionUtterYouAreOutOfBalances(Action):
+    def name(self) -> Text:
+        return "action_utter_you_are_out_of_balances"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message("You ran out of balances.")
+        return []
+
+class ActionUtterAlreadyLeaveOnDateRangeProvided(Action):
+    def name(self) -> Text:
+        return "action_utter_already_leave_on_date_range_provided"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # - text: Already there is a leave on this date range. Please provide another date range.
+        # - text: You cannot apply on this date range since there is another leave. Please provide another date range.
+        dispatcher.utter_message("Already there is a leave on this date range. Please provide another date range.")
+        return []
+
 class ActionApplyALeave(Action):
     def name(self) -> Text:
         return "action_apply_a_leave"
@@ -37,7 +59,7 @@ class ActionApplyALeave(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message("We have 3 Holidays coming up Veterans Day on Nov 11 th , Thanksgiving on Nov 28 th , Christmas day on Dec 25 th.")
+        dispatcher.utter_message("Applying Leave.")
         return []
 
 class ActionUtterLeaveConfirmationMessage(Action):
@@ -47,7 +69,7 @@ class ActionUtterLeaveConfirmationMessage(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message("We have 3 Holidays coming up Veterans Day on Nov 11 th , Thanksgiving on Nov 28 th , Christmas day on Dec 25 th.")
+        dispatcher.utter_message("Can I apply Leave.")
         return []
 
 class ActionUtterLeaveConfirmedMessage(Action):
@@ -57,7 +79,7 @@ class ActionUtterLeaveConfirmedMessage(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message("We have 3 Holidays coming up Veterans Day on Nov 11 th , Thanksgiving on Nov 28 th , Christmas day on Dec 25 th.")
+        dispatcher.utter_message("Leave Created.")
         return []
 
 class FallbackAction(Action):
@@ -71,18 +93,18 @@ class FallbackAction(Action):
         dispatcher.utter_message("Sorry, didn't get that. Try again.")
         return [UserUtteranceReverted()]
 
-class ApplyLeaveForm(FormAction):
-    def name(self):
-        return "apply_leave_form"
+# class ApplyLeaveForm(FormAction):
+#     def name(self):
+#         return "apply_leave_form"
     
-    @staticmethod
-    def required_slots(tracker):
-        return ["slot1", "slot2"]
+#     @staticmethod
+#     def required_slots(tracker):
+#         return ["slot1", "slot2"]
     
-    def submit(self, dispatcher, tracker, domain):
-        # dispatcher.utter_template('utter_submitted', tracker)
-        # dispatcher.utter_template('utter_please_wait', tracker)
-        return []
+#     def submit(self, dispatcher, tracker, domain):
+#         # dispatcher.utter_template('utter_submitted', tracker)
+#         # dispatcher.utter_template('utter_please_wait', tracker)
+#         return []
 
 class ActionRestarted(Action): 	
     def name(self): 		
