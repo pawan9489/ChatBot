@@ -112,6 +112,9 @@ slots:
     type: text
   end_datetime:
     type: unfeaturized
+  is_leave_booking_confirmed:
+    type: bool
+    auto_fill: false
   is_valid_date_range:
     type: bool
   is_valid_leave_type:
@@ -548,16 +551,22 @@ templates:
   - text: May I know the start and end date of your leave.
   - text: Please provide the start and end date of your leave.
   utter_not_a_valid_employee_id:
-  - text: I am sorry, I couldn't find your Employee ID. Can you please try again with
-      right employee ID
+  - text: I am sorry, I couldn't find your Employee ID.
   utter_not_a_valid_leave_type:
   - text: I am sorry, you are not enrolled in that leave type
   utter_start_date_is_greater_than_end_date:
   - text: Provided date range is Invalid
   utter_ask_reference:
-  - text: Can I have your Employee ID
   - text: Please provide your Employee ID
   - text: Enter your Employee ID
+  utter_ask_is_leave_booking_confirmed:
+  - text: Hi {name}, you want to apply {leave_type} leave form {start_datetime} to
+      {end_datetime}. Please confirm.
+    buttons:
+    - title: Confirm
+      payload: Confirm
+    - title: Cancel
+      payload: Disagree
 actions:
 - utter_agent.beautiful
 - utter_agent.be_clever
@@ -658,6 +667,7 @@ actions:
 - utter_have_a_nice_day
 - utter_start_date_is_greater_than_end_date
 - utter_ask_reference
+- utter_ask_is_leave_booking_confirmed
 - action_fetch_entitlement
 - action_fetch_holidays_information
 - action_utter_already_leave_on_date_range_provided
@@ -673,6 +683,7 @@ actions:
 - fallback_action
 - action_slot_reset_except_employee_id
 - action_slot_reset -->
+- action_slot_reset_except_employee_id -->
 forms:
 - apply_leave_form
 - seek_balances_form

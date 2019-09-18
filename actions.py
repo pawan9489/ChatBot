@@ -75,7 +75,8 @@ class ApplyLeaveForm(FormAction):
             "reference",
             "leave_type",
             "start_datetime",
-            "end_datetime"
+            "end_datetime",
+            "is_leave_booking_confirmed"
         ]
 
     def slot_mappings(self):
@@ -95,48 +96,74 @@ class ApplyLeaveForm(FormAction):
                 # self.from_text(intent="saying_leave_type"),
             ],
             "start_datetime": [
-                self.from_entity(entity="start_datetime", intent="apply_leave"),
-                self.from_entity(entity="start_datetime", intent="saying_leave_date_range"),
+                self.from_entity(entity="time", intent="saying_leave_date_range"),
                 # self.from_entity(entity="time", intent="apply_leave"), # duckling dimension
                 # self.from_entity(entity="time", intent="saying_leave_date_range"),
                 # self.from_text(intent="apply_leave"),
             ],
             "end_datetime": [
-                self.from_entity(entity="end_datetime", intent="apply_leave"),
-                self.from_entity(entity="end_datetime", intent="saying_leave_date_range"),
+                self.from_entity(entity="time", intent="saying_leave_date_range"),
+            ],
+            "is_leave_booking_confirmed": [
+                self.from_intent(intent="confirmation.yes", value=True),
+                self.from_intent(intent="confirmation.no", value=False),
             ]
         }
 
     def validate_start_datetime(self, value, dispatcher, tracker, domain):
         """Check to see if an time entity was actually picked up by duckling."""
-        time = tracker.get_slot("time")
-        if time is None:
-            return {"start_datetime": None}            
-        if isinstance(time, dict):
+        if isinstance(value, dict):
             # {"start_datetime":"tomorrow","end_datetime":"day after tomorrow",
             #  "time":{"to":"2019-09-21T00:00:00.000-07:00","from":"2019-09-19T00:00:00.000-07:00"}}
             from dateutil.parser import parse
-            start = parse(time['from'])
-            end = parse(time['to'])
+            start = parse(value['from'])
+            end = parse(value['to'])
             if start > end:
                 dispatcher.utter_template("utter_start_date_is_greater_than_end_date", tracker)
                 return {"start_datetime": None}
             else:
                 return {
-                    'start_datetime': time['from'],
-                    'end_datetime': time['to']
+                    'start_datetime': value['from'],
+                    'end_datetime': value['to']
                 }
         else:
             return {
-                'start_datetime': time
+                'start_datetime': value
+            }
+
+    def validate_end_datetime(self, value, dispatcher, tracker, domain):
+        """Check to see if an time entity was actually picked up by duckling."""
+        if isinstance(value, dict):
+            # {"start_datetime":"tomorrow","end_datetime":"day after tomorrow",
+            #  "time":{"to":"2019-09-21T00:00:00.000-07:00","from":"2019-09-19T00:00:00.000-07:00"}}
+            from dateutil.parser import parse
+            start = parse(value['from'])
+            end = parse(value['to'])
+            if start > end:
+                dispatcher.utter_template("utter_start_date_is_greater_than_end_date", tracker)
+                return {"start_datetime": None}
+            else:
+                return {
+                    'start_datetime': value['from'],
+                    'end_datetime': value['to']
+                }
+        else:
+            return {
+                'end_datetime': value
             }
 
     def validate_reference(self, value, dispatcher, tracker, domain):
         if value.lower() in data:
-            return {"reference": value}
+            return {"reference": value, "name": data[value]["name"]}
         else:
             dispatcher.utter_template("utter_not_a_valid_employee_id", tracker)
             return {"reference": None}
+
+    def validate_is_leave_booking_confirmed(self, value, dispatcher, tracker, domain):
+        if value:
+            return {"is_leave_booking_confirmed": True}
+        else:
+            return {"is_leave_booking_confirmed": False}
     
     def validate_leave_type(self, value, dispatcher, tracker, domain):
         emp_id = tracker.get_slot("reference")
@@ -158,9 +185,15 @@ class ApplyLeaveForm(FormAction):
         leave_type = tracker.get_slot('leave_type')
         start_datetime = tracker.get_slot('start_datetime')
         end_datetime = tracker.get_slot('end_datetime')
-        name = data[reference]["name"]
-        dispatcher.utter_message("{3} - your {0} leave is Successfully applied from {1} to {2}.".format(leave_type, start_datetime, end_datetime, name))
-        return []
+        is_leave_booking_confirmed = tracker.get_slot('is_leave_booking_confirmed')
+        name = tracker.get_slot('name')
+        if is_leave_booking_confirmed:
+            dispatcher.utter_message("{3} - your {0} leave is Successfully applied from {1} to {2}.".format(leave_type, start_datetime, end_datetime, name))
+            return []
+        else:
+            self.deactivate()
+            dispatcher.utter_template('utter_have_a_nice_day', tracker)
+            return [AllSlotsReset(), SlotSet('reference', reference), SlotSet('is_valid_reference', True)]
 
 class SeekBalancesForm(FormAction):
     def name(self):
@@ -192,7 +225,7 @@ class SeekBalancesForm(FormAction):
 
     def validate_reference(self, value, dispatcher, tracker, domain):
         if value.lower() in data:
-            return {"reference": value}
+            return {"reference": value, "name": data[value]["name"]}
         else:
             dispatcher.utter_template("utter_not_a_valid_employee_id", tracker)
             return {"reference": None}

@@ -1,6 +1,6 @@
 import ./booking_dates.chatito
 
-%[saying_leave_date_range]
+%[saying_leave_date_range]('training': '2000', 'distribution': 'even')
     ~[from?] @[start_datetime] ~[to] @[end_datetime]
     ~[want_from?] @[start_datetime] ~[to] @[end_datetime]
     on @[start_datetime]

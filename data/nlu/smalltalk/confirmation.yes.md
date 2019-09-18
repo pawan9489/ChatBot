@@ -2,6 +2,9 @@
 - yeah exactly
 - okay that's fine
 - I agree
+- I confirm
+- Confirm
+- I am confirming this
 - that is ok
 - I guess
 - okey
