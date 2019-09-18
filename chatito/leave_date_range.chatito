@@ -1,9 +1,19 @@
 import ./booking_dates.chatito
 
 %[saying_leave_date_range]
-    from @[datetime] to @[datetime]
-    ~[want_from?] @[datetime] to @[datetime]
-    on @[datetime]
+    ~[from?] @[start_datetime] ~[to] @[end_datetime]
+    ~[want_from?] @[start_datetime] ~[to] @[end_datetime]
+    on @[start_datetime]
+
+~[from]
+    from
+
+~[to]
+    -
+    till
+    to
+    upto
+    up to
 
 ~[want_from]
     apply from

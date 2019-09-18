@@ -7,8 +7,147 @@
 
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
+from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet, Restarted, AllSlotsReset
 from rasa_sdk.executor import CollectingDispatcher
+from db import data
+from datetime import datetime
+from collections import namedtuple
+
+DateRange = namedtuple('DateRange', ['start', 'end'])
+
+class ActionUtterProvideTheEmployeeID(Action):
+    def name(self) -> Text:
+        return "action_utter_provide_the_employee_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        emp_id = tracker.get_slot('reference')
+        #   utter_provide_the_employee_id:
+        messages = ['Can I have your Employee ID', 'Please provide your Employee ID', 'Enter your Employee ID']
+        if emp_id is not None:
+            import random
+            dispatcher.utter_message(random.choice(messages))
+        return []
+
+
+class ActionValidateEmployeeID(Action):
+    def name(self) -> Text:
+        return "action_validate_employee_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        emp_id = tracker.get_slot('reference')
+        if emp_id:
+            return [SlotSet('is_valid_reference', emp_id in data)]
+        return []
+
+class ActionValidateLeaveType(Action):
+    def name(self) -> Text:
+        return "action_validate_leave_type"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        emp_id = tracker.get_slot('reference')
+        if emp_id:
+            leave_type = tracker.get_slot('leave_type')
+            valid_leave_type = leave_type in map(lambda a: a["name"], data[emp_id]["leave_information"]["enrolment"])
+            return [SlotSet('is_valid_leave_type', valid_leave_type)]
+        return []
+
+class ActionValidateLeaveDateRange(Action): # Check for Overlapping Leaves
+    def name(self) -> Text:
+        return "action_validate_leave_date_range"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        emp_id = tracker.get_slot('reference')
+        if emp_id:
+            leave_type = tracker.get_slot('leave_type')
+            start_date = tracker.get_slot('start_datetime')
+            end_date = tracker.get_slot('end_datetime')
+            apply_range = DateRange(start=datetime.strptime(start_date, '%d/%m/%Y'), end=datetime.strptime(end_date, '%d/%m/%Y'))
+            for r in data[emp_id]["leave_information"]["leaves"]:
+                db_range = DateRange(start=datetime.strptime(r["start_date"], '%d/%m/%Y'), end=datetime.strptime(r["end_date"], '%d/%m/%Y'))
+                latest_start = max(apply_range.start, db_range.start)
+                earliest_end = min(apply_range.end, db_range.end)
+                delta = (earliest_end - latest_start).days + 1
+                overlap = max(0, delta)
+                return [SlotSet('is_valid_date_range', overlap == 0)]
+        return []
+
+class ApplyLeaveForm(FormAction):
+    def name(self):
+        return "apply_leave_form"
+
+    @staticmethod
+    def required_slots(tracker):
+        return [
+            "reference",
+            "leave_type",
+            "start_datetime",
+            "end_datetime"
+        ]
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {
+            "reference": [
+                self.from_entity(entity="reference"),
+                self.from_text(intent="saying_employee_id"),
+            ],
+            "leave_type": [
+                self.from_entity(entity="leave_type"),
+                self.from_text(intent="saying_leave_type"),
+            ],
+            "start_datetime": [
+                self.from_entity(entity="time"), # duckling dimension
+                self.from_text(intent="saying_leave_date_range"),
+                # self.from_text(intent="apply_leave"),
+            ],
+            "end_datetime": [
+                self.from_entity(entity="time"), # duckling dimension
+                self.from_text(intent="saying_leave_date_range"),
+                # self.from_text(intent="apply_leave"),
+            ]
+        }
+
+    def validate_start_datetime(self, value, dispatcher, tracker, domain):
+        """Check to see if an time entity was actually picked up by duckling."""
+        if isinstance(value, dict):
+            # {"start_datetime":"tomorrow","end_datetime":"day after tomorrow",
+            #  "time":{"to":"2019-09-21T00:00:00.000-07:00","from":"2019-09-19T00:00:00.000-07:00"}}
+            return {
+                'start_datetime': value['from'],
+                'end_datetime': value['to']
+            }
+        else:
+            return {
+                'start_datetime': value
+            }
+
+    def submit(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict]:
+        reference = tracker.get_slot('reference')
+        leave_type = tracker.get_slot('leave_type')
+        start_datetime = tracker.get_slot('start_datetime')
+        end_datetime = tracker.get_slot('end_datetime')
+        dispatcher.utter_message("Your leave is Successfully applied {0} {1} {2} {3}.".format(reference, leave_type, start_datetime, end_datetime))
+        return []
 
 class ActionFetchEntitlement(Action):
     def name(self) -> Text:
@@ -59,7 +198,11 @@ class ActionApplyALeave(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message("Applying Leave.")
+        reference = tracker.get_slot('reference')
+        leave_type = tracker.get_slot('leave_type')
+        start_datetime = tracker.get_slot('time')['from']
+        end_datetime = tracker.get_slot('time')['to']
+        dispatcher.utter_message("Your leave is Successfully applied {0} {1} {2} {3}.".format(reference, leave_type, start_datetime, end_datetime))
         return []
 
 class ActionUtterLeaveConfirmationMessage(Action):
@@ -93,27 +236,23 @@ class FallbackAction(Action):
         dispatcher.utter_message("Sorry, didn't get that. Try again.")
         return [UserUtteranceReverted()]
 
-# class ApplyLeaveForm(FormAction):
-#     def name(self):
-#         return "apply_leave_form"
-    
-#     @staticmethod
-#     def required_slots(tracker):
-#         return ["slot1", "slot2"]
-    
-#     def submit(self, dispatcher, tracker, domain):
-#         # dispatcher.utter_template('utter_submitted', tracker)
-#         # dispatcher.utter_template('utter_please_wait', tracker)
-#         return []
-
 class ActionRestarted(Action): 	
     def name(self): 		
         return 'action_restarted' 	
     def run(self, dispatcher, tracker, domain): 
         return[Restarted()]
 
-class ActionSlotReset(Action): 	
-    def name(self): 		
-        return 'action_slot_reset' 	
-    def run(self, dispatcher, tracker, domain): 		
+class ActionSlotReset(Action):
+    def name(self):
+        return 'action_slot_reset'
+    def run(self, dispatcher, tracker, domain):
+        return[AllSlotsReset()]
+
+class ActionSlotResetExceptEmployeeID(Action):
+    def name(self):
+        return 'action_slot_reset_except_employee_id'
+    def run(self, dispatcher, tracker, domain):
+        emp_id = tracker.get_slot('reference')
+        if emp_id:
+            return [AllSlotsReset(), SlotSet('reference', emp_id), SlotSet('is_valid_reference', True)]
         return[AllSlotsReset()]

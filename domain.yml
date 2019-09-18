@@ -103,17 +103,29 @@ entities:
 - year_string
 - datetime
 - duration
+- end_datetime
+- start_datetime
 slots:
   datetime:
     type: text
   duration:
     type: text
+  end_datetime:
+    type: text
+  is_valid_date_range:
+    type: bool
+  is_valid_leave_type:
+    type: bool
+  is_valid_reference:
+    type: bool
   leave_type:
     type: text
   name:
     type: unfeaturized
   reference:
     type: unfeaturized
+  start_datetime:
+    type: text
   year:
     type: text
   year_string:
@@ -527,10 +539,6 @@ templates:
   utter_how_can_i_help_you_more:
   - text: Go head shoot your concerns.
   - text: Fine I am here to answer your queries
-  utter_provide_the_employee_id:
-  - text: Can I have your Employee ID
-  - text: Please provide your Employee ID
-  - text: Enter your Employee ID
   utter_wait_till_i_get_you_leave_info:
   - text: Thank you {name}, I am pulling up your leaves
   - text: Thank you {name}, I am fetching your leaves information
@@ -538,7 +546,10 @@ templates:
   - text: May I know the start and end date of your leave.
   - text: Please provide the start and end date of your leave.
   utter_not_a_valid_employee_id:
-  - text: I am sorry, I couldn’t find your Employee ID. Can you please try again with right employee ID
+  - text: I am sorry, I couldn't find your Employee ID. Can you please try again with
+      right employee ID
+  utter_not_a_valid_leave_type:
+  - text: I am sorry, you are not enrolled in that leave type
 actions:
 - utter_agent.beautiful
 - utter_agent.be_clever
@@ -632,19 +643,25 @@ actions:
 - utter_start_date
 - utter_end_date
 - utter_how_can_i_help_you_more
-- utter_provide_the_employee_id
 - utter_not_a_valid_employee_id
+- utter_not_a_valid_leave_type
 - utter_provide_start_and_end_date_of_leave
-- utter_already_leave_on_date_range_provided
 - utter_need_any_more_information
 - utter_have_a_nice_day
+- action_utter_provide_the_employee_id
 - action_fetch_entitlement
 - action_fetch_holidays_information
 - action_utter_already_leave_on_date_range_provided
 - action_utter_you_are_out_of_balances
 - action_apply_a_leave
+- action_validate_employee_id
+- action_validate_leave_type
+- action_validate_leave_date_range
 - action_utter_leave_confirmation_message
 - action_utter_leave_confirmed_message
 - action_slot_reset
 - action_restarted
 - fallback_action
+- action_slot_reset_except_employee_id
+forms:
+- apply_leave_form

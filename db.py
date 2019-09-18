@@ -14,10 +14,6 @@ data = {
                 {
                     "name": "Paid",
                     "balance": 11,
-                },
-                {
-                    "name": "Unpaid",
-                    "balance": 16,
                 }
             ],
             "leaves": [
@@ -43,10 +39,6 @@ data = {
                 {
                     "name": "Sick",
                     "balance": 13,
-                },
-                {
-                    "name": "Paid",
-                    "balance": 20,
                 },
                 {
                     "name": "Unpaid",

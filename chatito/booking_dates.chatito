@@ -11,6 +11,33 @@
     13:55 pm
     6:15 am
 
+@[start_datetime]
+    tomorrow
+    day after tomorrow
+    today
+    23/03/2019
+    3rd of this month
+    6th May
+    12-09-2019
+    15th August
+    23rd February
+    12:45 am
+    13:55 pm
+    6:15 am
+
+@[end_datetime]
+    tomorrow
+    day after tomorrow
+    today
+    23/03/2019
+    3rd of this month
+    6th May
+    15th August
+    23rd February
+    12:45 am
+    13:55 pm
+    6:15 am
+
 @[duration]
     10 minutes
     4 hours
