@@ -1,6 +1,6 @@
 ## Fetch entitlement - this year
 * ask_for_balances
-    - utter_leave_type
+    - utter_ask_leave_type
 * saying_leave_type{"leave_type": "annual"}
     - slot{"year_string": "current year"}
     - action_fetch_entitlement

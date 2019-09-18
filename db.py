@@ -1,5 +1,5 @@
 data = {
-    "EID44220": {
+    "eid44220": {
         "name": "Bob",
         "leave_information": {
             "enrolments": [
@@ -28,7 +28,7 @@ data = {
             ]
         }
     },
-    "EID07642": {
+    "eid07642": {
         "name": "Adam",
         "leave_information": {
             "enrolments": [

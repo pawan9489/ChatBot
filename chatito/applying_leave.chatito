@@ -32,7 +32,7 @@ import ./booking_dates.chatito
 %[feeling_sick]
     ~[feeling] ~[sick]
 
-%[apply_leave]('training': '3500', 'distribution': 'even')
+%[apply_leave]('training': '2500', 'distribution': 'even')
     *[20%] ~[can_you?] ~[apply] ~[a_an?] @[leave_type] leave
     ~[apply] @[leave_type] leave on @[start_datetime]
     *[20%] ~[apply] @[leave_type] leave from @[start_datetime] ~[to] @[end_datetime]
