@@ -465,10 +465,10 @@ section .sectiontextdesktop {
 
 .rb-chat-icon{
 	position: relative;
-	height: 45px;
-	width: 45px;
+	height: 55px;
+	width: 55px;
 	text-align: center;
-	line-height: 40px;
+	line-height: 50px;
 	background-color: #0069ff;
 	padding: 0 11px;
 	border-radius: 5em;

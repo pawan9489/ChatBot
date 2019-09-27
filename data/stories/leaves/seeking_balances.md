@@ -24,10 +24,10 @@
 
 ## Fetch entitlement - Happy Path
 * ask_for_balances
-    - utter_agent.sure
     - seek_balances_form
     - form{"name": "seek_balances_form"}
     - form{"name": null}
+* appraisal.good OR confirmation.yes
+    - form{"name": "apply_leave_form"}
     - action_slot_reset_except_employee_id
-* appraisal.thank_you OR appraisal.good
-    - utter_have_a_nice_day
+    - form{"name": null}

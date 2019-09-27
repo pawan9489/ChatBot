@@ -1,6 +1,6 @@
 data = {
     "eid44220": {
-        "name": "Bob",
+        "name": "Bob Martin",
         "leave_information": {
             "enrolments": [
                 {
@@ -12,7 +12,7 @@ data = {
                     "balance": 4,
                 },
                 {
-                    "name": "Paid",
+                    "name": "PTO",
                     "balance": 11,
                 }
             ],
@@ -29,7 +29,7 @@ data = {
         }
     },
     "eid07642": {
-        "name": "Adam",
+        "name": "John Snow",
         "leave_information": {
             "enrolments": [
                 {
@@ -41,7 +41,7 @@ data = {
                     "balance": 13,
                 },
                 {
-                    "name": "Unpaid",
+                    "name": "PTO",
                     "balance": 4,
                 }
             ],

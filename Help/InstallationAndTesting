@@ -1,4 +1,25 @@
-// Pre-requisites Installation Guide
+// Linux - 
+// sudo add-apt-repository ppa:jonathonf/python-3.6
+// sudo apt-get update
+// sudo apt-get install python3.6
+// sudo apt-get install python3.6-dev // IMPORTANT
+// python3.6 -m venv --system-site-packages ./venv
+// source ./venv/bin/activate
+// pip install -U spacy
+// python -m spacy download en_core_web_md
+// python -m spacy link en_core_web_md en
+// pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+// sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+// curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+// sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+// sudo apt-get update
+// sudo apt-get install docker-ce
+// docker pull rasa/duckling
+// docker run -p 8000:8000 rasa/duckling
+// sudo apt-get install nodejs
+// sudo apt-get install npm
+
+// WINDOWS Pre-requisites Installation Guide
 1. Install Python Version <= 3.6
 2. Install C++ 14 Build tools (Visual Studio Community Edition 2019) (Windows only)
 3. pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
@@ -64,7 +85,7 @@ rasa -h	                Shows all available commands
               - results/story_confmat.pdf (Confusion Matrix)
 
 // Run HTTP Server (Documentation - https://rasa.com/docs/rasa/api/http-api/#http-api)
-10. rasa run -m models --enable-api --log-file out.log // Fetches Model from local machine
+10. rasa run -m models --enable-api --log-file out.log --cors "*"// Fetches Model from local machine
     rasa run --enable-api --log-file out.log --endpoints my_endpoints.yml // Fetches Model from endpoint specified
 
     // HTTPS

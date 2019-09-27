@@ -250,6 +250,7 @@ templates:
   - text: That's my job.
   - text: Of course I am.
   utter_agent.sure:
+  - text: Ok
   - text: Yes.
   - text: Of course.
   - text: Positive.
@@ -497,36 +498,14 @@ templates:
   - text: I understand.
   - text: Okay then.
   utter_ask_leave_type:
-  - text: For which leave type
+  - text: "Ok Let's get started.\nWhich type of time off do you want to schedule?"
     buttons:
-    - title: Annual
+    - title: Vacation day
       payload: Annual
-    - title: Sick
+    - title: Sick day
       payload: Sick
-    - title: Paid
-      payload: Paid
-    - title: Unpaid
-      payload: Unpaid
-  - text: Can you please specify the leave type
-    buttons:
-    - title: Annual
-      payload: Annual
-    - title: Sick
-      payload: Sick
-    - title: Paid
-      payload: Paid
-    - title: Unpaid
-      payload: Unpaid
-  - text: Can you be more specific about the leave type
-    buttons:
-    - title: Annual
-      payload: Annual
-    - title: Sick
-      payload: Sick
-    - title: Paid
-      payload: Paid
-    - title: Unpaid
-      payload: Unpaid
+    - title: PTO day
+      payload: PTO
   utter_which_year:
   - text: For which year you want the balanaces to be fetched
   - text: Can you please provide the year for which you want the entitlement
@@ -560,8 +539,8 @@ templates:
   - text: Please provide your Employee ID
   - text: Enter your Employee ID
   utter_ask_is_leave_booking_confirmed:
-  - text: Hi {name}, you want to apply {leave_type} leave form {start_datetime} to
-      {end_datetime}. Please confirm.
+  - text: '{name}, Please confirm your {leave_type} leave form {start_datetime} to
+      {end_datetime}.'
     buttons:
     - title: Confirm
       payload: Confirm

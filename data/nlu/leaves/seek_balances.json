@@ -44,6 +44,156 @@
                 "entities": []
             },
             {
+                "text": "How many leaves I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many leaves I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many balance I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many balances I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many entitlement I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many entitlements I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many balance I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many balances I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many entitlement I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many entitlements I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my balance leaves",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my balances leaves",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my entitlement leaves",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my entitlements leaves",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my balance leaves left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my balances leaves left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my entitlement leaves left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my entitlements leaves left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave balance",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave balances",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave entitlement",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave entitlements",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave balance left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave balances left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave entitlement left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "check my leave entitlements left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many vacation days do I have ?",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "How many vacation days do I have left?",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "how much time off do I have",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
+                "text": "how much time off do I have left",
+                "intent": "ask_for_balances",
+                "entities": []
+            },
+            {
                 "text": "my balance",
                 "intent": "ask_for_balances",
                 "entities": []
@@ -812,290 +962,146 @@
                 ]
             },
             {
-                "text": "what is my paid balance",
+                "text": "what is my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid balance",
+                "text": "hi what is my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid balance",
+                "text": "hello what is my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid balance",
+                "text": "hey what is my PTO balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid balance",
+                "text": "hey may I know my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid balance",
+                "text": "can you tell my PTO balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid balance",
+                "text": "hello can you tell my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid balance",
+                "text": "hey can you tell my PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -1532,290 +1538,146 @@
                 ]
             },
             {
-                "text": "what is my paid balances",
+                "text": "what is my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid balances",
+                "text": "hi what is my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid balances",
+                "text": "hello what is my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid balances",
+                "text": "hey what is my PTO balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid balances",
+                "text": "hey may I know my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid balances",
+                "text": "can you tell my PTO balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid balances",
+                "text": "hello can you tell my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid balances",
+                "text": "hey can you tell my PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -2252,290 +2114,146 @@
                 ]
             },
             {
-                "text": "what is my paid entitlement",
+                "text": "what is my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid entitlement",
+                "text": "hi what is my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid entitlement",
+                "text": "hello what is my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid entitlement",
+                "text": "hey what is my PTO entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid entitlement",
+                "text": "hey may I know my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid entitlement",
+                "text": "can you tell my PTO entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid entitlement",
+                "text": "hello can you tell my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid entitlement",
+                "text": "hey can you tell my PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -2972,290 +2690,146 @@
                 ]
             },
             {
-                "text": "what is my paid entitlements",
+                "text": "what is my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid entitlements",
+                "text": "hi what is my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid entitlements",
+                "text": "hello what is my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid entitlements",
+                "text": "hey what is my PTO entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid entitlements",
+                "text": "hey may I know my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid entitlements",
+                "text": "can you tell my PTO entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid entitlements",
+                "text": "hello can you tell my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid entitlements",
+                "text": "hey can you tell my PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -3692,290 +3266,146 @@
                 ]
             },
             {
-                "text": "what is my paid leave balance",
+                "text": "what is my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid leave balance",
+                "text": "hi what is my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid leave balance",
+                "text": "hello what is my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid leave balance",
+                "text": "hey what is my PTO leave balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO leave balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO leave balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid leave balance",
+                "text": "hey may I know my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid leave balance",
+                "text": "can you tell my PTO leave balance",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid leave balance",
+                "text": "hello can you tell my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid leave balance",
+                "text": "hey can you tell my PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -4412,290 +3842,146 @@
                 ]
             },
             {
-                "text": "what is my paid leave balances",
+                "text": "what is my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid leave balances",
+                "text": "hi what is my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid leave balances",
+                "text": "hello what is my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid leave balances",
+                "text": "hey what is my PTO leave balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO leave balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO leave balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid leave balances",
+                "text": "hey may I know my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid leave balances",
+                "text": "can you tell my PTO leave balances",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid leave balances",
+                "text": "hello can you tell my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid leave balances",
+                "text": "hey can you tell my PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -5132,290 +4418,146 @@
                 ]
             },
             {
-                "text": "what is my paid leave entitlement",
+                "text": "what is my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid leave entitlement",
+                "text": "hi what is my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid leave entitlement",
+                "text": "hello what is my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid leave entitlement",
+                "text": "hey what is my PTO leave entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO leave entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO leave entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid leave entitlement",
+                "text": "hey may I know my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid leave entitlement",
+                "text": "can you tell my PTO leave entitlement",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid leave entitlement",
+                "text": "hello can you tell my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid leave entitlement",
+                "text": "hey can you tell my PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -5852,290 +4994,146 @@
                 ]
             },
             {
-                "text": "what is my paid leave entitlements",
+                "text": "what is my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 15,
+                        "end": 14,
                         "entity": "leave_type",
                         "start": 11,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello what is my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey what is my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 19,
-                        "entity": "leave_type",
-                        "start": 15,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 18,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 21,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 22,
-                        "entity": "leave_type",
-                        "start": 18,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "can you tell my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 16,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hi can you tell my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 19,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 22,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey can you tell my paid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "what is my unpaid leave entitlements",
+                "text": "hi what is my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 17,
                         "entity": "leave_type",
-                        "start": 11,
-                        "value": "unpaid"
+                        "start": 14,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi what is my unpaid leave entitlements",
+                "text": "hello what is my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 20,
                         "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
+                        "start": 17,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hello what is my unpaid leave entitlements",
+                "text": "hey what is my PTO leave entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "leave_type",
+                        "start": 15,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "may I know my PTO leave entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "leave_type",
+                        "start": 14,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi may I know my PTO leave entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "leave_type",
+                        "start": 17,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hello may I know my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 23,
                         "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
+                        "start": 20,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey what is my unpaid leave entitlements",
+                "text": "hey may I know my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 21,
                         "entity": "leave_type",
-                        "start": 15,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "may I know my unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 20,
-                        "entity": "leave_type",
-                        "start": 14,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hi may I know my unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 23,
-                        "entity": "leave_type",
-                        "start": 17,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello may I know my unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 26,
-                        "entity": "leave_type",
-                        "start": 20,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hey may I know my unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 24,
-                        "entity": "leave_type",
                         "start": 18,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "can you tell my unpaid leave entitlements",
+                "text": "can you tell my PTO leave entitlements",
+                "intent": "ask_for_balances",
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "leave_type",
+                        "start": 16,
+                        "value": "PTO"
+                    }
+                ]
+            },
+            {
+                "text": "hi can you tell my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 22,
                         "entity": "leave_type",
-                        "start": 16,
-                        "value": "unpaid"
+                        "start": 19,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi can you tell my unpaid leave entitlements",
+                "text": "hello can you tell my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
                         "end": 25,
                         "entity": "leave_type",
-                        "start": 19,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello can you tell my unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 28,
-                        "entity": "leave_type",
                         "start": 22,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey can you tell my unpaid leave entitlements",
+                "text": "hey can you tell my PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 26,
+                        "end": 23,
                         "entity": "leave_type",
                         "start": 20,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6308,26 +5306,14 @@
                 ]
             },
             {
-                "text": "paid leave balance",
+                "text": "PTO leave balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6368,26 +5354,14 @@
                 ]
             },
             {
-                "text": "paid leave balances",
+                "text": "PTO leave balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6428,26 +5402,14 @@
                 ]
             },
             {
-                "text": "paid leave entitlement",
+                "text": "PTO leave entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6488,26 +5450,14 @@
                 ]
             },
             {
-                "text": "paid leave entitlements",
+                "text": "PTO leave entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6548,26 +5498,14 @@
                 ]
             },
             {
-                "text": "paid balance",
+                "text": "PTO balance",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid balance",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6608,26 +5546,14 @@
                 ]
             },
             {
-                "text": "paid balances",
+                "text": "PTO balances",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid balances",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6668,26 +5594,14 @@
                 ]
             },
             {
-                "text": "paid entitlement",
+                "text": "PTO entitlement",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid entitlement",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6728,26 +5642,14 @@
                 ]
             },
             {
-                "text": "paid entitlements",
+                "text": "PTO entitlements",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid entitlements",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6788,26 +5690,14 @@
                 ]
             },
             {
-                "text": "paid balance?",
+                "text": "PTO balance?",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid balance?",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6848,26 +5738,14 @@
                 ]
             },
             {
-                "text": "paid balances?",
+                "text": "PTO balances?",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid balances?",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6908,26 +5786,14 @@
                 ]
             },
             {
-                "text": "paid entitlement?",
+                "text": "PTO entitlement?",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid entitlement?",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -6968,26 +5834,14 @@
                 ]
             },
             {
-                "text": "paid entitlements?",
+                "text": "PTO entitlements?",
                 "intent": "ask_for_balances",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid entitlements?",
-                "intent": "ask_for_balances",
-                "entities": [
-                    {
-                        "end": 6,
-                        "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -9404,98 +8258,50 @@
                 ]
             },
             {
-                "text": "paid",
+                "text": "PTO",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi paid",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 7,
-                        "entity": "leave_type",
-                        "start": 3,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello paid",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 6,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey paid",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 8,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid",
+                "text": "hi PTO",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 6,
                         "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "start": 3,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi unpaid",
+                "text": "hello PTO",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 9,
                         "entity": "leave_type",
-                        "start": 3,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello unpaid",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 12,
-                        "entity": "leave_type",
                         "start": 6,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey unpaid",
+                "text": "hey PTO",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 10,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -9644,98 +8450,50 @@
                 ]
             },
             {
-                "text": "paid leave",
+                "text": "PTO leave",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi paid leave",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 7,
-                        "entity": "leave_type",
-                        "start": 3,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello paid leave",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 6,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey paid leave",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 8,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave",
+                "text": "hi PTO leave",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 6,
                         "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "start": 3,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi unpaid leave",
+                "text": "hello PTO leave",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 9,
                         "entity": "leave_type",
-                        "start": 3,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello unpaid leave",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 12,
-                        "entity": "leave_type",
                         "start": 6,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey unpaid leave",
+                "text": "hey PTO leave",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 10,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -9884,98 +8642,50 @@
                 ]
             },
             {
-                "text": "paid leave type",
+                "text": "PTO leave type",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 4,
+                        "end": 3,
                         "entity": "leave_type",
                         "start": 0,
-                        "value": "paid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi paid leave type",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 7,
-                        "entity": "leave_type",
-                        "start": 3,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hello paid leave type",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 6,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "hey paid leave type",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 8,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "unpaid leave type",
+                "text": "hi PTO leave type",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 6,
                         "entity": "leave_type",
-                        "start": 0,
-                        "value": "unpaid"
+                        "start": 3,
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hi unpaid leave type",
+                "text": "hello PTO leave type",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
                         "end": 9,
                         "entity": "leave_type",
-                        "start": 3,
-                        "value": "unpaid"
-                    }
-                ]
-            },
-            {
-                "text": "hello unpaid leave type",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 12,
-                        "entity": "leave_type",
                         "start": 6,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
             {
-                "text": "hey unpaid leave type",
+                "text": "hey PTO leave type",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 10,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -10052,26 +8762,14 @@
                 ]
             },
             {
-                "text": "for paid",
+                "text": "for PTO",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 8,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "for unpaid",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -10112,26 +8810,14 @@
                 ]
             },
             {
-                "text": "for paid leave",
+                "text": "for PTO leave",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 8,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "for unpaid leave",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },
@@ -10172,26 +8858,14 @@
                 ]
             },
             {
-                "text": "for paid leave type",
+                "text": "for PTO leave type",
                 "intent": "saying_leave_type",
                 "entities": [
                     {
-                        "end": 8,
+                        "end": 7,
                         "entity": "leave_type",
                         "start": 4,
-                        "value": "paid"
-                    }
-                ]
-            },
-            {
-                "text": "for unpaid leave type",
-                "intent": "saying_leave_type",
-                "entities": [
-                    {
-                        "end": 10,
-                        "entity": "leave_type",
-                        "start": 4,
-                        "value": "unpaid"
+                        "value": "PTO"
                     }
                 ]
             },

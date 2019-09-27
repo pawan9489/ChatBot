@@ -3,9 +3,18 @@ import ./questioning.chatito
 import ./leave_type.chatito
 import ./balances_year.chatito
 
+~[left]
+    left
+
 %[ask_for_balances]
     ~[balance]
     ~[balance]?
+    How many leaves I have ~[left?]
+    How many ~[balance] I have ~[left?]
+    check my ~[balance] leaves ~[left?]
+    check my leave ~[balance] ~[left?]
+    How many vacation days do I have ~[left?]?
+    how much time off do I have ~[left?]
     ~[hi?] my ~[balance]
     ~[hi?] ~[get] my ~[balance]
     ~[hi?] ~[questioningMy] ~[balance]

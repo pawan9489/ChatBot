@@ -3,15 +3,12 @@
 language: en
 pipeline: 
 - name: SpacyNLP
-# - name: SpacyTokenizer
-- name: WhitespaceTokenizer
-  case_sensitive: false
+- name: SpacyTokenizer
 - name: SpacyFeaturizer
 - name: RegexFeaturizer
 - name: CRFEntityExtractor
-  features: [["low", "upper"],["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3", "suffix2", "upper", "digit", "pattern"],["low", "upper"]]
 - name: DucklingHTTPExtractor
-  url: http://35.199.26.99:8000
+  url: http://35.245.19.88:8000
   # dimensions:
   # - time
   # - email
@@ -22,13 +19,7 @@ pipeline:
   # timezone: Europe/Berlin
   # timezone: Asia/Calcutta
 - name: EntitySynonymMapper
-# - name: SklearnIntentClassifier
-- name: CountVectorsFeaturizer
-  oov_token: oov
-- name: EmbeddingIntentClassifier
-  epochs: 50
-  intent_tokenization_flag: true
-  intent_split_symbol: "+"
+- name: SklearnIntentClassifier
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
