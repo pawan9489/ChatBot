@@ -8,7 +8,7 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import SlotSet, Restarted, AllSlotsReset
+from rasa_sdk.events import SlotSet, Restarted, AllSlotsReset, UserUtteranceReverted
 from rasa_sdk.executor import CollectingDispatcher
 from db import data
 from datetime import datetime
@@ -88,27 +88,28 @@ class ApplyLeaveForm(FormAction):
             or a list of them, where a first match will be picked"""
 
         return {
-            "reference": [
-                self.from_entity(entity="reference", intent="saying_employee_id")
-            ],
+            "reference": self.from_entity(entity="reference", intent="saying_employee_id"),
             "leave_type": [
                 self.from_entity(entity="leave_type", intent="saying_leave_type"),
-                self.from_entity(entity="leave_type", intent="apply_leave")
+                # self.from_entity(entity="leave_type", intent="apply_leave")
+                self.from_text(intent="apply_leave")
                 # self.from_text(intent="saying_leave_type"),
             ],
             "start_datetime": [
                 self.from_entity(entity="time", intent="saying_leave_date_range"),
-                self.from_entity(entity="time", intent="apply_leave"), # duckling dimension
+                # self.from_entity(entity="time", intent="apply_leave"), # duckling dimension
                 # self.from_entity(entity="time", intent="saying_leave_date_range"),
-                # self.from_text(intent="apply_leave"),
+                self.from_text(intent="apply_leave"),
             ],
             "end_datetime": [
                 self.from_entity(entity="time", intent="saying_leave_date_range"),
                 self.from_entity(entity="time", intent="apply_leave"),
             ],
             "is_leave_booking_confirmed": [
+                self.from_intent(intent="confirmation.cancel", value=False),
                 self.from_intent(intent="confirmation.yes", value=True),
-                self.from_intent(intent="confirmation.no", value=False),
+                self.from_intent(intent="confirmation.no", value=False),                
+                self.from_intent(intent="user.does_not_want_to_talk", value=False),
             ]
         }
 
@@ -377,7 +378,6 @@ class FallbackAction(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        from rasa_core.events import UserUtteranceReverted
         dispatcher.utter_message("Sorry, didn't get that. Try again.")
         try:
             return [UserUtteranceReverted()]

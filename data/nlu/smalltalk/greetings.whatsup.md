@@ -1,3 +1,6 @@
+## intent:apply_leave
+- Apply a leave
+
 ## intent:greetings.whatsup
 - what is on your mind?
 - what's happened
@@ -30,3 +33,9 @@
 - wassup yo
 - sup yo
 - wassap yo
+
+## intent:saying_employee_id
+- [EID44220](reference:eid44220)[44220](number)
+
+## intent:saying_leave_type
+- [Annual](leave_type:annual)

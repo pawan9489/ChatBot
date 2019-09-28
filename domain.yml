@@ -105,6 +105,7 @@ entities:
 - duration
 - end_datetime
 - start_datetime
+- number
 slots:
   datetime:
     type: text
@@ -546,6 +547,15 @@ templates:
       payload: Confirm
     - title: Cancel
       payload: Disagree
+  utter_want_to_discontinue_applying_sick:
+  - text: Do you want me to cancel the Leave plan.
+    buttons:
+    - title: Confirm
+      payload: Confirm
+    - title: Cancel
+      payload: Disagree
+  utter_leave_booking_has_been_cancelled:
+  - text: Your current leave booking has been cancelled.
 actions:
 - utter_agent.beautiful
 - utter_agent.be_clever
@@ -643,6 +653,8 @@ actions:
 - utter_not_a_valid_leave_type
 - utter_provide_start_and_end_date_of_leave
 - utter_need_any_more_information
+- utter_leave_booking_has_been_cancelled
+- utter_want_to_discontinue_applying_sick
 - utter_have_a_nice_day
 - utter_start_date_is_greater_than_end_date
 - utter_ask_reference

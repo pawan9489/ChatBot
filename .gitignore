@@ -13,3 +13,4 @@ hist.png
 # npx chatito chatito/ask_for_balances.chatito --format=rasa
 rasa_dataset_testing.json
 rasa_dataset_training.json
+story_graph.dot
