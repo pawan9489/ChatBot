@@ -26,6 +26,7 @@
 // rasa run actions 2> action_error.log > action_output.log &
 // rasa run -m models --enable-api --log-file out.log --cors "*" 2> core_error.log > core_output.log &
 // rasa interactive -m models/<model.tar.gz> --endpoints endpoints.yml
+// ps aux | grep 'python\|rasa\|http'
 
 // WINDOWS Pre-requisites Installation Guide
 1. Install Python Version <= 3.6

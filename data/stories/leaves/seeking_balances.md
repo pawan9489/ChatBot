@@ -101,7 +101,7 @@
     - slot{"name":"Bob Martin"}
     - form{"name":null}
     - slot{"requested_slot":null}
-* deny_confirmation_of_leave_applying OR confirmation.no OR confirmation.cancel OR user.does_not_want_to_talk
+* confirmation.no OR deny_confirmation_of_leave_applying OR confirmation.cancel OR user.does_not_want_to_talk
     - utter_have_a_nice_day
 
 ## Fetch Entitlements - Think of applying and immediately cancels
