@@ -113,6 +113,7 @@
     - slot{"name":"Bob Martin"}
     - slot{"requested_slot":"leave_type"}
 * deny_confirmation_of_leave_applying OR confirmation.no OR confirmation.cancel OR user.does_not_want_to_talk
+    - utter_leave_booking_has_been_cancelled
     - action_deactivate_form
     - form{"name":null}
     - slot{"requested_slot":null}

@@ -12,13 +12,13 @@ pipeline:
   features: [["low", "upper"],["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3", "suffix2", "upper", "digit", "pattern"],["low", "upper"]]
 - name: DucklingHTTPExtractor
   url: http://35.199.26.99:8000
-  # dimensions:
-  # - time
+  dimensions:
+  - time
   # - email
   # - number
   # - amount-of-money
   # - distance
-  # locale: en-GB
+  locale: en-GB
   # timezone: Europe/Berlin
   # timezone: Asia/Calcutta
 - name: EntitySynonymMapper

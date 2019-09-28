@@ -38,7 +38,8 @@ $(document).ready(function () {
             "sick day": "Sick",
             "pto day": "PTO",
         };
-        pumpMessage(leave_map[event.currentTarget.innerText.toLowerCase()]);
+        const key = event.currentTarget.innerText.toLowerCase();
+        pumpMessage(leave_map.hasOwnProperty(key) ? leave_map[key] : key);
     };
 	// <img src="images/tenor.gif" style="height:35px;width:60px;"></img>
 

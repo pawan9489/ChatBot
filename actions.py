@@ -11,7 +11,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet, Restarted, AllSlotsReset, UserUtteranceReverted
 from rasa_sdk.executor import CollectingDispatcher
 from db import data
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import namedtuple
 
 DateRange = namedtuple('DateRange', ['start', 'end'])
@@ -96,13 +96,15 @@ class ApplyLeaveForm(FormAction):
                 # self.from_text(intent="saying_leave_type"),
             ],
             "start_datetime": [
-                self.from_entity(entity="time", intent="saying_leave_date_range"),
+                # self.from_entity(entity="time", intent="saying_leave_date_range"),
+                self.from_entity(entity="start_datetime", intent="saying_leave_date_range"),
                 # self.from_entity(entity="time", intent="apply_leave"), # duckling dimension
                 # self.from_entity(entity="time", intent="saying_leave_date_range"),
                 self.from_text(intent="apply_leave"),
             ],
             "end_datetime": [
-                self.from_entity(entity="time", intent="saying_leave_date_range"),
+                # self.from_entity(entity="time", intent="saying_leave_date_range"),
+                self.from_entity(entity="end_datetime", intent="saying_leave_date_range"),
                 self.from_entity(entity="time", intent="apply_leave"),
             ],
             "is_leave_booking_confirmed": [
@@ -115,13 +117,13 @@ class ApplyLeaveForm(FormAction):
 
     def validate_start_datetime(self, value, dispatcher, tracker, domain):
         """Check to see if an time entity was actually picked up by duckling."""
-        print('Called validate_start_datetime')
         if isinstance(value, dict):
+            print(value)
             # {"start_datetime":"tomorrow","end_datetime":"day after tomorrow",
             #  "time":{"to":"2019-09-21T00:00:00.000-07:00","from":"2019-09-19T00:00:00.000-07:00"}}
             from dateutil.parser import parse
             start = parse(value['from'])
-            end = parse(value['to'])
+            end = parse(value['to']) # - timedelta(days=1)
             
             if start is not None and end is None:
                 if start.strftime("%H") == '00' and start.strftime("%M") == '00':
@@ -164,7 +166,7 @@ class ApplyLeaveForm(FormAction):
             #  "time":{"to":"2019-09-21T00:00:00.000-07:00","from":"2019-09-19T00:00:00.000-07:00"}}
             from dateutil.parser import parse
             start = parse(value['from'])
-            end = parse(value['to'])
+            end = parse(value['to']) # - timedelta(days=1)
             if start > end:
                 dispatcher.utter_template("utter_start_date_is_greater_than_end_date", tracker)
                 return {"start_datetime": None}
