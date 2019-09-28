@@ -13,7 +13,7 @@ $(document).ready(function () {
     };
 
     // const fetch = require('node-fetch');
-    const domain = '35.194.94.133';
+    const domain = '35.199.26.99';
     // const domain = 'localhost';
     const botURL = `http://${domain}:5005/webhooks/rest/webhook`;
     const userID = Math.floor(Math.random() * Math.floor(9999999));
@@ -33,7 +33,12 @@ $(document).ready(function () {
     }).then(response => response.json());
 
     const enterMessageToInput = event => {
-        pumpMessage(event.currentTarget.innerText);
+        const leave_map = {
+            "vacation day": "Annual",
+            "sick day": "Sick",
+            "pto day": "PTO",
+        };
+        pumpMessage(leave_map[event.currentTarget.innerText.toLowerCase()]);
     };
 	// <img src="images/tenor.gif" style="height:35px;width:60px;"></img>
 
@@ -144,16 +149,21 @@ $(document).ready(function () {
         $("#textInput").val('');
 		const loading_time_out = 500;
         scrollBottom(container);
-		chatBox.append(create_loading_image());
+        chatBox.append(create_loading_image());
+        let loading_removed = false;
         send_a_message(message).then(answers => {
             answers.forEach(answer => {
                 // An answer can contain Buttons
                 if (answer.buttons) {
                     const buttonsToFeed = answer.buttons.map(button => ({
-                        "text": button.payload
+                        // "text": button.payload
+                        "text": button.title
                     }));
 					setTimeout(() => {
-						chatBox.removeChild(chatBox.lastChild);
+                        if (!loading_removed) {
+                            chatBox.removeChild(chatBox.lastChild);
+                            loading_removed = true;
+                        }
 						chatBox.append(frame_a_question(answer.text, {
 							"context": "",
 							"buttons": buttonsToFeed
@@ -162,7 +172,10 @@ $(document).ready(function () {
 					}, loading_time_out);
                 } else {
 					setTimeout(() => {
-						chatBox.removeChild(chatBox.lastChild);
+						if (!loading_removed) {
+                            chatBox.removeChild(chatBox.lastChild);
+                            loading_removed = true;
+                        }
 						chatBox.append(frame_a_question(answer.text));
 						scrollBottom(container);
 					}, loading_time_out);

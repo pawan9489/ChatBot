@@ -31,9 +31,3 @@
 ## intent:confirmation.yes
 - Yes
 - yes
-
-## intent:deny_confirmation_of_leave_applying
-- Cancel stop I dont want to
-
-## intent:saying_employee_id
-- [EID44220](reference:eid44220)[44220](number)

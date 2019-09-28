@@ -675,6 +675,7 @@ actions:
 - action_slot_reset_except_employee_id
 - action_slot_reset -->
 - action_slot_reset_except_employee_id -->
+- ->
 forms:
 - apply_leave_form
 - seek_balances_form
