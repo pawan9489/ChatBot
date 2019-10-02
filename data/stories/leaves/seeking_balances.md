@@ -45,6 +45,23 @@
     - action_slot_reset_except_employee_id
     - utter_have_a_nice_day 
 -->
+
+## Fetch Entitlements - But dont apply leave
+* ask_for_balances
+    - seek_balances_form
+    - form{"name":"seek_balances_form"}
+    - slot{"requested_slot":"reference"}
+* saying_employee_id{"reference":"eid44220","number":44220}
+    - slot{"reference":"eid44220"}
+    - seek_balances_form
+    - slot{"reference":"eid44220"}
+    - slot{"name":"Bob Martin"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* confirmation.no OR deny_confirmation_of_leave_applying OR confirmation.cancel OR user.does_not_want_to_talk
+    - utter_leave_booking_has_been_cancelled
+    - utter_have_a_nice_day
+
 ## Fetch Entitlements - Happy Path via applying leave
 * ask_for_balances
     - seek_balances_form
@@ -87,21 +104,6 @@
     - reset_slots
     - slot{"reference": "eid44220"}
     - slot{"is_valid_reference": true}
-    - utter_have_a_nice_day
-
-## Fetch Entitlements - But dont apply leave
-* ask_for_balances
-    - seek_balances_form
-    - form{"name":"seek_balances_form"}
-    - slot{"requested_slot":"reference"}
-* saying_employee_id{"reference":"eid44220","number":44220}
-    - slot{"reference":"eid44220"}
-    - seek_balances_form
-    - slot{"reference":"eid44220"}
-    - slot{"name":"Bob Martin"}
-    - form{"name":null}
-    - slot{"requested_slot":null}
-* confirmation.no OR deny_confirmation_of_leave_applying OR confirmation.cancel OR user.does_not_want_to_talk
     - utter_have_a_nice_day
 
 ## Fetch Entitlements - Think of applying and immediately cancels
